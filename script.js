@@ -33,7 +33,7 @@ const setError = (message) => {
 
 const clearError = () => {
     document.getElementById('error').style.display = 'none'
-    document.getElementById('errortext').innerHTML = 'There was an error.'
+    document.getElementById('errortext').innerHTML = 'errore.'
 }
 
 const setAudio = (base64, text) => {
@@ -83,7 +83,7 @@ const submitForm = () => {
     const textLength = new TextEncoder().encode(text).length
     console.log(textLength)
 
-    if (textLength === 0) text = 'inserisci il testo. (NO ita)'
+    if (textLength === 0) text = '...'
     const voice = document.getElementById('voice').value
 
     if(voice == "none") {
