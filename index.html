@@ -4,9 +4,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script defer="" data-domain="weilbyte.github.io/tiktok-tts" src="https://plausible.io/js/plausible.js"></script>
+    <script defer="" data-domain="https://rotocchino.github.io/TTS-TikTok-/" src="https://plausible.io/js/plausible.js"></script>
     <script src="script.js"></script>
-    <title>TTS</title>
+    <title>TTS(reader)</title>
     <style>
         #funny:hover {
             opacity: 0;
@@ -29,7 +29,7 @@
         <h1 class="text-6xl font-bold text-center">
             TTS(rotocco)
         </h1>
-        <p class="text-center pt-6"> <span id="funny">solo ed esclusivamente con</span> voci di TikTok (solo in inglese) <sup></sup> </p>
+        <p class="text-center pt-6"> <span id="funny">solo ed esclusivamente con</span> voci di TikTok <sup></sup> </p>
     </div>
     <div class="bg-slate-200 md:mt-11 p-11 md:mx-auto h-2/4 md:w-3/5 md:rounded">
         <form onsubmit="event.preventDefault(); submitForm()">
@@ -38,7 +38,7 @@
             <textarea id="text" name="text" placeholder="The fungus among us." oninput="onTextareaInput()" class="h-full w-full rounded p-2 bg-slate-100"></textarea><br>
             <label for="voice" hidden="">Voice to use</label>
             <select name="voice" id="voice" class="rounded p-1 bg-slate-100 mt-2 w-full sm:w-1/2">
-                <option selected="" disabled="" hidden="" value="none">seleziona</option>
+                <option selected="" disabled="" hidden="" value="none">segli una voce</option>
 
                 <option disabled="" class="bold">americane</option>
                 <option value="en_us_001">femmina(TikTok)</option>
@@ -77,7 +77,7 @@
                 <option disabled=""></option>
 
 
-                <option disabled="" class="bold">Characters</option>
+                <option disabled="" class="bold">Attori</option>
                 <option value="en_us_ghostface">Ghostface (Scream)</option>
                 <option value="en_us_chewbacca">Chewbacca (Star Wars)</option>
                 <option value="en_us_c3po">C3PO (Star Wars)</option>
@@ -93,15 +93,15 @@
     </div>
 
     <div class="bg-red-200 md:mt-6 p-6 pt-3 md:mx-auto h-2/4 md:w-2/4 md:rounded" id="error" style="display: none">
-        <h1 class="text-center font-bold text-xl">Error</h1>
-        <p class="text-center" id="errortext">There was an error.</p>
+        <h1 class="text-center font-bold text-xl">Errore</h1>
+        <p class="text-center" id="errortext">c'era un errore.</p>
     </div>
 
     <div class="bg-green-200 md:mt-6 p-6 pt-3 md:mx-auto h-2/4 md:w-2/4 md:rounded" id="success" style="display: none">
-        <h1 class="text-center font-bold text-xl">Success</h1>
+        <h1 class="text-center font-bold text-xl"></h1>
         <p class="text-center" id="generatedtext"></p>
         <audio controls="" class="mx-auto mt-2" id="audio" src="">
-            Umm, update your browser.
+            Umm... aggiorna il tuo browser.
         </audio>
     </div>
 

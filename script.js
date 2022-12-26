@@ -69,7 +69,7 @@ const onTextareaInput = () => {
     if (textEncoded.length > TEXT_BYTE_LIMIT) {
         document.getElementById('charcount').style.color = 'red'
     } else {
-        document.getElementById('charcount').style.color = 'black'
+        document.getElementById('charcount').style.color = 'green'
     }
 }
 
@@ -83,17 +83,17 @@ const submitForm = () => {
     const textLength = new TextEncoder().encode(text).length
     console.log(textLength)
 
-    if (textLength === 0) text = 'The fungus among us.' 
+    if (textLength === 0) text = 'inserisci il testo. (NO ita)'
     const voice = document.getElementById('voice').value
 
     if(voice == "none") {
-        setError("No voice has been selected");
+        setError("non hai scelto una voce");
         enableControls()
         return
     }
 
     if (textLength > TEXT_BYTE_LIMIT) {
-        setError(`Text must not be over ${TEXT_BYTE_LIMIT} UTF-8 characters (currently at ${textLength})`)
+        setError(`il testo max. deve arrivare a ${TEXT_BYTE_LIMIT} caratteri, invece ne ha (${textLength})`)
         enableControls()
         return
     }
